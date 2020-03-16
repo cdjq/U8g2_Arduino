@@ -12,9 +12,9 @@ Download (2.26.14): https://github.com/olikraus/U8g2_Arduino/archive/master.zip
 
 ## U8g2_Arduino:单色图像显示库
 * U8g2_Arduino是一个功能强大的单色图像显示库，提供了通用的基础显示（点、线、圆等）、各种常用的图标、好看的字体等。DFRobot基于自身产品，对U8g2_Arduino进行了修改：
-1. 下载Arduino IDE<br>
-1. 从github下载GDL代码<br>
-1. 使用Arduino IDE从下载的文件中打开“GraphicsTest.ino”<br>
+  1. 下载Arduino IDE<br>
+  1. 从github下载GDL代码<br>
+  1. 使用Arduino IDE从下载的文件中打开“GraphicsTest.ino”<br>
    1. 增加了DFRobot_Demo文件夹，提供了产品的特色Demo。
    1. U8g2原有Demo只保留了自有产品的构造函数，便于用户使用。
 
