@@ -47,7 +47,7 @@ U8g2_Arduino目前支持多种的显示驱动IC和分辨率，下表查看目前
 U8g2_Arduino可以满足不同软件开发水平的人使用。对于初学者，您只需有Arduino基础，就可以进行丰富多样的显示。U8g2_Arduino API接口函数链接可以帮助你学习。
 
 1. 下载Arduino IDE<br>
-1. 从github下载GDL代码<br>
+1. 从github下载U8g2_Arduino代码<br>
 1. 使用Arduino IDE从下载的文件中打开“GraphicsTest.ino”<br>
 1. 连接您的Arduino Uno开发板<br>
 1. 选择工具>板子：Arduino Uno和工具>端口：选择你的Arduino开发板<br>
