@@ -13,7 +13,7 @@ Download (2.26.14): https://github.com/olikraus/U8g2_Arduino/archive/master.zip
 ## U8g2_Arduino:单色图像显示库
 * U8g2_Arduino是一个功能强大的单色图像显示库，提供了通用的基础显示（点、线、圆等）、各种常用的图标、好看的字体等。DFRobot基于自身产品，对U8g2_Arduino进行了修改：
 1. 增加了DFRobot_Demo文件夹，提供了产品的特色Demo。
-1. U8g2原有Demo只保留了自有产品的构造函数，便于用户使用。
+1. 对所有Demo的实体化函数进行了删减。
 
 
 ## 功能列表
@@ -63,4 +63,4 @@ U8g2_Arduino可以满足不同软件开发水平的人使用。对于初学者�
 
 2、问：为什么Language.ino中韩文不能正常显示？
 
-*  答：这是由于Arduino的原因，虽然在示例程序中不能正常显示，但是上传代码后，屏幕会正常显示。
+*  答：这是由于Arduino编码的原因，如果Arduino IDE是utf8编码，就不会有这个问题。虽然在示例程序中不能正常显示，但是上传代码后，屏幕正常显示。
