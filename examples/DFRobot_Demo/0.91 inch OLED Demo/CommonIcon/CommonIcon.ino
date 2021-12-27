@@ -61,9 +61,9 @@ void loop(void){
      u8g2.clear();
      do {
        u8g2.setFont(u8g2_font_open_iconic_all_4x_t);  //Select "u8g2_font_open_iconic_all_4x_t" as font styles
-       u8g2.drawGlyph(/* x=*/0, /* y=*/0, /* encoding=*/i);    //Draw the first character set code with x=0, y=0 as coordinates  //drawGlyph(u8g2_uint_t x, u8g2_uint_t y, /*character set code*/uint16_t encoding);
-       u8g2.drawGlyph(/* x=*/40, /* y=*/0, /* encoding=*/i+1); //Draw the second character set code with x=40, y=0 as coordinates
-       u8g2.drawGlyph(/* x=*/80, /* y=*/0, /* encoding=*/i+2); //Draw the third character set code with x=80, y=0 as coordinates
+       u8g2.drawGlyph(/* x=*/0, /* y=*/0, /* encoding=*/i);    //Draw the first font set code with x=0, y=0 as coordinates  //drawGlyph(u8g2_uint_t x, u8g2_uint_t y, /*character set code*/uint16_t encoding);
+       u8g2.drawGlyph(/* x=*/40, /* y=*/0, /* encoding=*/i+1); //Draw the second font set code with x=40, y=0 as coordinates
+       u8g2.drawGlyph(/* x=*/80, /* y=*/0, /* encoding=*/i+2); //Draw the third font set code with x=80, y=0 as coordinates
      } while ( u8g2.nextPage());
     
     delay(2000);
