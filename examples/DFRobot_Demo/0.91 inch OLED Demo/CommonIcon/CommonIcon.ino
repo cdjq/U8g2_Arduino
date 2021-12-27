@@ -38,7 +38,7 @@ void setup(void){
     }
 
 /*
- * Select character set
+ * Select font set
  * u8g2_font_open_iconic_all_1x_t :Width :8  Height :8  encoding : 64-286
  * u8g2_font_open_iconic_all_2x_t :Width :16  Height :16  encoding : 64-286
  * u8g2_font_open_iconic_all_4x_t :Width :32  Height :32  encoding : 64-286
