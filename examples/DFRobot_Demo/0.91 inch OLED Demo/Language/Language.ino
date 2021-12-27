@@ -1,6 +1,6 @@
 /*!
  * @file Language.ino
- * @brief Display multi-languages in U8G2
+ * @brief Display multiple languages in U8G2
  * @n Display "hello world!" in Chinese, English, Korean and Japanese
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
