@@ -1,7 +1,7 @@
 /*!
  * @file Font.ino
  * @brief Display of several fonts that U8G2 supported
- * @n U8G2 supports kinds of fonts, this demo just displays several of them to display
+ * @n U8G2 supports kinds of fonts, this demo just displays several of them
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
