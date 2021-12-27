@@ -1,7 +1,7 @@
 /*!
  * @file Language.ino
  * @brief Display multiple languages in U8G2
- * @n Display "hello world!" in Chinese, English, Korean and Japanese
+ * @n Demonstrate "hello world!" in Chinese, English, Korean and Japanese
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
