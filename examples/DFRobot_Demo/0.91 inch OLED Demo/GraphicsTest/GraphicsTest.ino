@@ -119,7 +119,7 @@ void u8g2_extra_page(uint8_t a)
   u8g2.drawStr( 0, 0, "Unicode");
   u8g2.setFont(u8g2_font_unifont_t_symbols);
   u8g2.setFontPosTop();
-  u8g2.drawUTF8(0, 9, "☀ ☁");//Draw a character string icon encoded in UTF-8 at the coordinates (0,24)
+  u8g2.drawUTF8(0, 9, "☀ ☁");//Draw a character string icon encoded in UTF-8 at the coordinates (0, 24)
   switch(a) {
     case 0:
     case 1:
