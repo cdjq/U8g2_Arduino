@@ -1,7 +1,7 @@
 /*!
  * @file Font.ino
  * @brief Display of several fonts direction that U8G2 supported
- * @n U8G2 supports kinds of fonts, this demo just displays four directions (no display mirror)
+ * @n U8G2 supports kinds of fonts, this demo just displays four directions (no mirror display)
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
