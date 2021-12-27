@@ -1,7 +1,7 @@
 /*!
  * @file Font.ino
  * @brief Display of several fonts that U8G2 supported
- * @n U8G2 supports kinds of fonts, this demo just displays part of them
+ * @n U8G2 supports kinds of fonts, this demo just displays several of them
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
@@ -39,7 +39,7 @@ void setup(void){
 void loop(void){
   u8g2.clearBuffer();            //Clear buffer  
   u8g2.setFont(u8g2_font_maniac_tr); //Set "u8g2_font_maniac_tr" as a font 
-  u8g2.drawStr(/* x=*/0, /* y=*/5, "DFR123");  //Start to draw the character string "DFR123" at the coordinates of x=0，y=5  
+  u8g2.drawStr(/* x=*/0, /* y=*/5, "DFR123");  //Start to draw the character string "DFR123" at the coordinates of x=0, y=5  
   u8g2.sendBuffer();          //Send buffer to the display      
   
   delay(1000);               //Delay 1000ms
