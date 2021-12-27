@@ -1,7 +1,7 @@
 /*!
  * @file Logo.ino
- * @brief 用U8G2在屏幕中显示一个单色图片
- * @n U8G2字体GitHub连接：https://github.com/olikraus/u8g2/wiki/fntlistall
+ * @brief Use U8G2 to display a monochrome graphics in the screen
+ * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @licence     The MIT License (MIT)
@@ -18,18 +18,18 @@
 #include <Wire.h>
 
 /*
- *IIC构造函数
- *@param 指定大局显示的基本布局：	U8G2_R0 不旋转，横向，绘制方向从左到右
-									U8G2_R1 顺时针旋转90度，绘制方向从上到下
-									U8G2_R2 顺时针旋转180度，绘制方向从右到左
-									U8G2_R3 顺时针旋转270度，绘制方向从下到上
-									U8G2_MIRROR 正常显示镜像内容（v2.6.x版本以上使用)   注意:U8G2_MIRROR需要与setFlipMode（）配搭使用.
- *@param reset：U8x8_PIN_NONE 表示引脚为空，不会使用复位引脚
+ *IIC constructor
+ *@param Determine the overall layout:	 U8G2_R0 no rotation, landscape, draw from left to right
+									U8G2_R1 Rotate 90 degree clockwise, draw from top to the bottom
+									U8G2_R2 Rotate 180 degree clockwise, draw from right to the left
+									U8G2_R3 Rotate 270 degree clockwise, draw from bottom to the top
+									U8G2_MIRROR Display mirror content normally (used by v2.6.x version or later)   Note: U8G2_MIRROR need using with setFlipMode ()
+ *@param reset：U8x8_PIN_NONE represent empty pin, will not use reset pin
  *
 */
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);  //  M0/ESP32/ESP8266/mega2560/Uno/Leonardo
 
-//下面的数组图片的数据  width:30,height:30
+//The data of the following array graphics  width:30,height:30
 const unsigned char col[] U8X8_PROGMEM= {0x00,0xc0,0x00,0x00,0x00,0xe0,0x01,0x00,0x00,0xe0,0x01,0x00,0x00,0xc0,0x00,0x00,
                                          0x00,0xc0,0x00,0x00,0x00,0xc0,0x00,0x00,0x00,0xe0,0x01,0x00,0x00,0xf8,0x07,0x00,
                                          0x06,0xfe,0x1f,0x18,0x07,0xff,0x3f,0x38,0xdf,0xff,0xff,0x3e,0xfa,0xff,0xff,0x17,
@@ -41,24 +41,24 @@ const unsigned char col[] U8X8_PROGMEM= {0x00,0xc0,0x00,0x00,0x00,0xe0,0x01,0x00
 
                                          
 void setup(void) {
-  u8g2.begin();  //初始化函数
+  u8g2.begin();  //Init function
 }
 
  
 
 void loop(void) {
 
-  u8g2.clearBuffer();           // 清空显示设备内部缓冲区
-//  u8g2.drawBox(0,0,128,32);  //画一个全屏显示
-//  u8g2.sendBuffer();        // 显示缓冲区内容
+  u8g2.clearBuffer();           // Clear buffer inside the display device
+//  u8g2.drawBox(0,0,128,32);  //Draw a full-screen display
+//  u8g2.sendBuffer();        // Display the buffer content
 //  
 //  delay(2000);
 
   u8g2.clearBuffer(); 
-  u8g2.drawXBMP( /* x=*/0 , /* y=*/0 , /* width=*/30 , /* height=*/30 , col );     //30,30为图片尺寸，根据你的图片尺寸修改
-  u8g2.setFont(u8g2_font_ncenB14_tr);    //设置字体
-  u8g2.drawStr(32,30,"DFRobot");        //绘制字符串
-  u8g2.sendBuffer();        // 显示缓冲区内容
+  u8g2.drawXBMP( /* x=*/0 , /* y=*/0 , /* width=*/30 , /* height=*/30 , col );     //Graphics size is 30x30 and can be changed based on the actual size.
+  u8g2.setFont(u8g2_font_ncenB14_tr);    //Set font
+  u8g2.drawStr(32,30,"DFRobot");        //Draw character string
+  u8g2.sendBuffer();        // Display the buffer content
   
   delay(2000);  
 }
