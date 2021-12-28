@@ -1,7 +1,7 @@
 /*!
  * @file Commomlcon.ino
  * @brief Display of the icon in U8G2
- * @n U8G2 supports kinds of icons, providing users with various icons
+ * @n U8G2 provides users with various kinds of icons
  * @n U8G2 font GitHub link: https://github.com/olikraus/u8g2/wiki/fntlistall
  * 
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
@@ -20,7 +20,7 @@
 
 /*
  *IIC constructor
- *@param Determine the overall layout: 	U8G2_R0 no rotation, landscape, draw direction is from left to right
+ *@param Determine the basic layout: 	U8G2_R0 no rotation, landscape, draw direction is from left to right
 									U8G2_R1 Rotate 90 degree clockwise, draw direction is from top to the bottom
 									U8G2_R2 Rotate 180 degree clockwise, draw direction is from right to the left
 									U8G2_R3 Rotate 270 degree clockwise, draw direction is from bottom to the top
