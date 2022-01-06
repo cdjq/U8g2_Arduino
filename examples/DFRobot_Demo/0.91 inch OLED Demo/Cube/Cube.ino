@@ -19,7 +19,7 @@
 
 /*
  *IIC constructor
- *@param Determine the overall layout: 	 U8G2_R0 no rotation, landscape, draw direction is from left to right
+ *@param Determine the basic layout: 	 U8G2_R0 no rotation, landscape, draw direction is from left to right
 									U8G2_R1 Rotate 90 degree clockwise, draw direction is from top to the bottom
 									U8G2_R2 Rotate 180 degree clockwise, draw direction is from right to the left
 									U8G2_R3 Rotate 270 degree clockwise, draw direction is from bottom to the top
@@ -38,7 +38,7 @@ void setup(void) {
 void loop(void) {
   u8g2.firstPage();
   do {
-  //Draw line to connect the corresponding vertices of the tetrahedron
+  //Draw lines to connect the corresponding vertices of the tetrahedron
   u8g2.drawLine(OxyzToOu(tetrahedron[0][0], tetrahedron[0][2]), OxyzToOv(tetrahedron[0][1], tetrahedron[0][2]), OxyzToOu(tetrahedron[1][0], tetrahedron[1][2]), OxyzToOv(tetrahedron[1][1], tetrahedron[1][2]));
   u8g2.drawLine(OxyzToOu(tetrahedron[1][0], tetrahedron[1][2]), OxyzToOv(tetrahedron[1][1], tetrahedron[1][2]), OxyzToOu(tetrahedron[2][0], tetrahedron[2][2]), OxyzToOv(tetrahedron[2][1], tetrahedron[2][2]));
   u8g2.drawLine(OxyzToOu(tetrahedron[0][0], tetrahedron[0][2]), OxyzToOv(tetrahedron[0][1], tetrahedron[0][2]), OxyzToOu(tetrahedron[2][0], tetrahedron[2][2]), OxyzToOv(tetrahedron[2][1], tetrahedron[2][2]));
@@ -75,7 +75,7 @@ int OxyzToOv(double y,double z){
 }
 /*!
  * @brief  Rotate the coordinates of all points of the 3D graphics around the Z-axis
- * @param  angle indicates the angle to be rotated
+ * @param  angle The angle to be rotated
  *     
  *  Rotate around z-axis (z-axis won't change)
     x3 = x2 * cosb - y1 * sinb
