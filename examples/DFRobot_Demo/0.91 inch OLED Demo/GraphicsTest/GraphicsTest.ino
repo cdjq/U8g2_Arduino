@@ -36,9 +36,9 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 void u8g2_prepare(void) {
   u8g2.setFont(u8g2_font_6x10_tf);	//Set the font to "u8g2_font_6x10_tf"
   u8g2.setFontRefHeightExtendedText();//Ascent will be the largest ascent of "A", "1" or "(" of the current font. Descent will be the descent of "g" or "(" of the current font.
-  u8g2.setDrawColor(1);		//Define the bit value for all the drawing functions (color index). All the drawing functions will change the display memory to the bit value. The default value is 1.
-  u8g2.setFontPosTop();	/*When using drawStr to display a character string, the default is to display the character coordinates at the bottom-left corner.
-                          The function is used to change the coordinate position to the upper-left corner where displays character string.*/
+  u8g2.setDrawColor(1);		//Define the bit value for all the drawing functions (color index). All the drawing functions will change the display memory to this bit value. The default value is 1.
+  u8g2.setFontPosTop();	/*When using drawStr to display a character string, the default criteria is to display the lower-left coordinate of the characters.
+                          The function is used to change the criteria to display the upper-left coordinate of the characters.*/
   u8g2.setFontDirection(0);	//Set font direction: 0 for normal display
 }
 
@@ -149,7 +149,7 @@ void u8g2_xor(uint8_t a) {
 }
 
 /*
- *The data of bitmap converted from the graphics is used for drawXBMP() display
+ *The data of bitmap converted from the graphics, used for drawXBMP() display
 */
 #define cross_width 24
 #define cross_height 24
