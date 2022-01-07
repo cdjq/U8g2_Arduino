@@ -21,7 +21,7 @@
 
 /*
  *IIC constructor
- *@param Determine the overall layout: 	 U8G2_R0 no rotation, landscape, draw from left to right
+ *@param Determine the basic layout: 	 U8G2_R0 no rotation, landscape, draw from left to right
 									U8G2_R1 Rotate 90 degree clockwise, draw from top to the bottom
 									U8G2_R2 Rotate 180 degree clockwise, draw from right to the left
 									U8G2_R3 Rotate 270 degree clockwise, draw from bottom to the top
@@ -50,8 +50,8 @@ const uint8_t col[] U8X8_PROGMEM= {0x00,0xc0,0x00,0x00,0x00,0xe0,0x01,0x00,0x00,
 
 void setup() {
   u8g2.begin();
-  u8g2.setFontPosTop();/*When using drawStr to display a character string, the default is to display the character coordinates at the bottom-left corner.
-                          The function is used to change the coordinate position to the upper-left corner where displays character string.*/
+  u8g2.setFontPosTop();/*When using drawStr to display a character string, the default criteria is to display the lower-left coordinate of the characters.
+                          The function is used to change the criteria to display the upper-left coordinate of the characters.*/
 }
 
 void Rotation() {
@@ -99,8 +99,8 @@ void loop(void)
        }
 	  /*
 	   * firstPage method will change the current page number to 0
-	   * The content to be modified is between firstPage and nextPage; need to re-render all the content every time
-	   * The method consumed less ram than sendBuffer did
+	   * The content to be modified is between firstPage and nextPage; re-render all the content every time
+	   * This method consumed less ram than sendBuffer did
 	  */ 
       u8g2.firstPage();  
       do 
