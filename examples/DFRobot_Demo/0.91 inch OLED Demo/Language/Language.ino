@@ -36,22 +36,22 @@ void setup(void) {
 
 void loop(void) 
 {
-  /*Note that the character library occupies large memory. If only a few characters need displaying, the coding of Chinese characters can be obtained,
-  Display them through the method of drawXBM, or use the MCU with larger memory*/
-  u8g2.setFont(u8g2_font_unifont_t_chinese2);  //Apply chinese2 to all the fonts of "hello world"
-  //u8g2.setFont(u8g2_font_b10_t_japanese1);  // All the fonts of "こんにちは世界" are contained in Japanese: Lerning 1-6 level
-  //u8g2.setFont(u8g2_font_unifont_t_korean1);  // All the fonts of "안녕하세요세계" are contained in Korean: Lerning 1-2 level
+  /*Note that the character library occupies large memory. If only a few fixed characters need displaying, you can directly get the Chinese character codes
+  and display them through the method drawXBM. Or you can use an MCU with larger memory*/
+  u8g2.setFont(u8g2_font_unifont_t_chinese2);  //Set all fonts in “你好世界” to Chinese2
+  //u8g2.setFont(u8g2_font_b10_t_japanese1);  // Japanese1 includes all fonts in “こんにちは世界” ：Lerning level 1-6 
+  //u8g2.setFont(u8g2_font_unifont_t_korean1);  // Korean1 includes all fonts in “안녕하세요세계”：Lerning level 1-2
   u8g2.setFontDirection(0);   //Set font direction, rotate 0 degree, from left to right
   
    /*
    * firstPage method will change the current page number to 0
-   * The content to be modified is between firstPage and nextPage; need to re-render all the content every time
+   * The content to be modified is between firstPage and nextPage; re-render all the content every time
    * The method consumed less ram than sendBuffer did
   */
   
   u8g2.firstPage();
   do {
-    u8g2.setCursor(/* x=*/0, /* y=*/15);    //Define the print function cursor, where any output of the print function starts
+    u8g2.setCursor(/* x=*/0, /* y=*/15);    //Define the cursor of print function, any output of the print function will start at this position.
     u8g2.print("Hello World!");
     u8g2.setCursor(0, 30);
     u8g2.print("你好世界");		// Chinese "Hello World" 
