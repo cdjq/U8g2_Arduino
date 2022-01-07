@@ -21,7 +21,7 @@
 
 /*
  *IIC constructor
- *@param Determine the overall layout:	 U8G2_R0 no rotation, landscape, draw from left to right
+ *@param Determine the basic layout:	 U8G2_R0 no rotation, landscape, draw from left to right
 									U8G2_R1 Rotate 90 degree clockwise, draw from top to the bottom
 									U8G2_R2 Rotate 180 degree clockwise, draw from right to the left
 									U8G2_R3 Rotate 270 degree clockwise, draw from bottom to the top
@@ -83,7 +83,7 @@ int OxyzToOv(double y,double z){
 
 /*!
  * @brief  Rotate the coordinates of all points of the 3D graphics around the Z-axis
- * @param  angle indicates the rotation degree
+ * @param  angle The angle to be rotated
  *     
  *  Rotate around z (z is fixed)
     x3 = x2 * cosb - y1 * sinb
